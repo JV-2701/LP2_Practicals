@@ -1,0 +1,73 @@
+public class LinearSearch {
+
+    // Function to perform linear search
+    public static Integer linearSearch(List<Integer> arr, Integer target) {
+        for(Integer i = 0; i < arr.size(); i++) {
+            if(arr[i] == target) {
+                return i; // Return the index of the target element if found
+            }
+        }
+        return -1; // Return -1 if the target element is not found
+    }
+
+    // Main method to test the linear search algorithm
+    public static void testLinearSearch() {
+        List<Integer> numbers = new List<Integer>{5, 10, 15, 20, 25};
+        Integer target = 15;
+        Integer index = linearSearch(numbers, target);
+        if(index != -1) {
+            System.debug('Element ' + target + ' found at index ' + index);
+        } else {
+            System.debug('Element ' + target + ' not found');
+        }
+    }
+}
+
+
+
+
+
+
+Sure, here are the answers to the short questions regarding the implementation of a linear search algorithm in Salesforce Apex:
+
+1. **What is the purpose of the `LinearSearch` class?**
+   - The `LinearSearch` class is created to implement a linear search algorithm in Salesforce Apex.
+
+2. **Explain the purpose of the `linearSearch` method.**
+   - The `linearSearch` method is responsible for searching for a target element in a list of integers and returning the index of the target element if found.
+
+3. **What are the parameters of the `linearSearch` method?**
+   - The `linearSearch` method takes two parameters: a list of integers (`List<Integer> arr`) and the target integer to search for (`Integer target`).
+
+4. **How does the `linearSearch` method work?**
+   - The `linearSearch` method iterates over each element in the list and compares it with the target integer. If a match is found, it returns the index of the element; otherwise, it returns -1.
+
+5. **What is the significance of the `List<Integer>` parameter in the `linearSearch` method?**
+   - The `List<Integer>` parameter specifies the type of elements in the input list, which in this case, are integers.
+
+6. **How do you specify the type of elements in a list in Salesforce Apex?**
+   - In Salesforce Apex, you specify the type of elements in a list by using angle brackets (`< >`) after the `List` keyword, followed by the data type of the elements.
+
+7. **How is the target element checked against each element in the list?**
+   - The target element is checked against each element in the list using a loop and an equality comparison (`==`) operator.
+
+8. **What value does the `linearSearch` method return if the target element is found? What if it is not found?**
+   - If the target element is found, the `linearSearch` method returns the index of the element in the list. If it is not found, the method returns -1.
+
+9. **Explain the purpose of the `testLinearSearch` method.**
+   - The `testLinearSearch` method is used to test the `linearSearch` method by providing sample input data and checking the output.
+
+10. **How is the `testLinearSearch` method executed in Salesforce Apex?**
+    - The `testLinearSearch` method is executed in Salesforce Apex by calling it from an anonymous block or from another method within the same class.
+
+11. **What output do you expect when executing the `testLinearSearch` method?**
+    - The expected output when executing the `testLinearSearch` method is either the index of the target element if found or a message indicating that the target element was not found.
+
+12. **How can you view the output of the `testLinearSearch` method in Salesforce?**
+    - The output of the `testLinearSearch` method can be viewed in the debug logs in Salesforce, which can be accessed from the Developer Console or Setup menu.
+
+13. **Can you modify the `testLinearSearch` method to search for a different target element? How?**
+    - Yes, you can modify the `testLinearSearch` method to search for a different target element by changing the value of the `target` variable to the desired integer.
+
+14. **What modifications would you make to the `linearSearch` method if the input list could contain null values?**
+    - If the input list could contain null values, you would need to handle null values appropriately in the `linearSearch` method to avoid potential NullPointerExceptions. This could involve adding a null check before comparing elements in the list with the target element.
